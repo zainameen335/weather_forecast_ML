@@ -93,7 +93,7 @@ with st.spinner("Training model... This may take a few seconds"):
 
 st.header("Compare Multiple Models")
 if st.button("Show Model Comparison"):
-    df = pd.read_csv("https://raw.githubusercontent.com/zainameen335/rfm-machine-learning-project/master/weatherAUS.csv")
+    df = pd.read_csv("https://media.githubusercontent.com/media/zainameen335/rfm-machine-learning-project/master/weatherAUS.csv")
     features = df.iloc[:, [1,2,3,4,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]].values
     results = df.iloc[:, -1].values.reshape(-1,1)
 
@@ -163,5 +163,6 @@ if st.button("Show Model Comparison"):
     plt.ylim(0,1)
     plt.title("Rain Detection Metrics Comparison")
     st.pyplot(plt.gcf())
+
 
 
