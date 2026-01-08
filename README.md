@@ -1,6 +1,6 @@
 # weather_forecast_ML
 
-#Features
+**Features
 
 Full data preprocessing (missing value handling, encoding, scaling)
 
@@ -11,7 +11,9 @@ Visualize performance with classification reports, confusion matrix, and feature
 Compare multiple models (Random Forest, Logistic Regression, XGBoost) using Accuracy, Precision, Recall, and F1-score
 
 Deployed as an interactive dashboard on Streamlit Cloud
-##Tech Stack
+
+**Tech Stack
+
 Machine Learning & Data Processing: Scikit-learn, XGBoost, Pandas, NumPy
 
 Visualization: Matplotlib, Seaborn
@@ -19,5 +21,7 @@ Visualization: Matplotlib, Seaborn
 Web Deployment: Streamlit
 
 Version Control & Hosting: GitHub
-##Live Demo
+
+**Live Demo
+
 Streamlit App: https://weatherforecastml-lrjz3ggiiksiwcjcjaa2kx.streamlit.app/
