@@ -1,5 +1,7 @@
 # weather_forecast_ML
-##Features
+
+#Features
+
 Full data preprocessing (missing value handling, encoding, scaling)
 
 Train Random Forest model for rainfall prediction
