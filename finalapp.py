@@ -19,7 +19,7 @@ st.title("Rain Prediction Dashboard 🌦️")
 st.header("Random Forest Rain Prediction")
 
 
-df = pd.read_csv("https://raw.githubusercontent.com/zainameen335/rfm-machine-learning-project/master/weatherAUS.csv")
+df = pd.read_csv("https://media.githubusercontent.com/media/zainameen335/rfm-machine-learning-project/master/weatherAUS.csv")
 st.write("Dataset Preview:", df.head())
 
 
@@ -163,4 +163,5 @@ if st.button("Show Model Comparison"):
     plt.ylim(0,1)
     plt.title("Rain Detection Metrics Comparison")
     st.pyplot(plt.gcf())
+
 
