@@ -118,7 +118,7 @@ if st.button("Show Model Comparison"):
     y_train = y_train.ravel().astype(int)
     y_test = y_test.ravel().astype(int)
 
-    # Define models
+    
     models = {
         "Random Forest": RandomForestClassifier(
             n_estimators=150,
@@ -163,6 +163,7 @@ if st.button("Show Model Comparison"):
     plt.ylim(0,1)
     plt.title("Rain Detection Metrics Comparison")
     st.pyplot(plt.gcf())
+
 
 
 
