@@ -13,17 +13,16 @@ import matplotlib.pyplot as plt
 
 st.title("Rain Prediction Dashboard 🌦️")
 
-# -------------------------
+
 # Section 1: Single Model (Random Forest)
-# -------------------------
+
 st.header("Random Forest Rain Prediction")
 
-# uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
-# if uploaded_file is not None:
-df = pd.read_csv("weatherAUS.csv")
+
+df = pd.read_csv("https://raw.githubusercontent.com/zainameen335/rfm-machine-learning-project/master/weatherAUS.csv")
 st.write("Dataset Preview:", df.head())
 
-    # Preprocessing
+
 features = df.iloc[:, [1,2,3,4,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]].values
     
 results = df.iloc[:, -1].values.reshape(-1,1)
@@ -46,7 +45,6 @@ x_train, x_test, y_train, y_test = train_test_split(features, results, test_size
 y_train = y_train.ravel().astype(int)
 y_test = y_test.ravel().astype(int)
 
-    # Train Random Forest
 with st.spinner("Training model... This may take a few seconds"):
     classifier = RandomForestClassifier(
           n_estimators=150, 
@@ -61,7 +59,6 @@ with st.spinner("Training model... This may take a few seconds"):
     st.subheader("Classification Report")
     st.text(classification_report(y_test, y_pred, target_names=['No','Yes']))
 
-    # Feature importance
     feature_names = [
         'Location','MinTemp','MaxTemp','Rainfall','Evaporation','Sunshine',
         'WindGustDir','WindGustSpeed','WindDir9am','WindDir3pm','WindSpeed9am',
@@ -77,7 +74,6 @@ with st.spinner("Training model... This may take a few seconds"):
     plt.title("Top 10 Important Features")
     st.pyplot(plt.gcf())
 
-    # Confusion matrix
     cm = confusion_matrix(y_test, y_pred)
     plt.figure(figsize=(5,4))
     sns.heatmap(cm, annot=True, fmt='d', xticklabels=['No Rain','Rain'], yticklabels=['No Rain','Rain'])
@@ -93,12 +89,11 @@ with st.spinner("Training model... This may take a few seconds"):
     ax3.set_title("Model Prediction Performance")
     st.pyplot(fig3)
 
-# -------------------------
 # Section 2: Model Comparison
-# -------------------------
+
 st.header("Compare Multiple Models")
 if st.button("Show Model Comparison"):
-    df = pd.read_csv("weatherAUS.csv")  # You can reuse uploaded_file if needed
+    df = pd.read_csv("https://raw.githubusercontent.com/zainameen335/rfm-machine-learning-project/master/weatherAUS.csv")
     features = df.iloc[:, [1,2,3,4,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]].values
     results = df.iloc[:, -1].values.reshape(-1,1)
 
@@ -168,3 +163,4 @@ if st.button("Show Model Comparison"):
     plt.ylim(0,1)
     plt.title("Rain Detection Metrics Comparison")
     st.pyplot(plt.gcf())
+
