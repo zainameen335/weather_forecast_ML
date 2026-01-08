@@ -1,6 +1,6 @@
 # weather_forecast_ML
 
-**Features
+**Features**
 
 Full data preprocessing (missing value handling, encoding, scaling)
 
@@ -12,7 +12,7 @@ Compare multiple models (Random Forest, Logistic Regression, XGBoost) using Accu
 
 Deployed as an interactive dashboard on Streamlit Cloud
 
-**Tech Stack
+**Tech Stack**
 
 Machine Learning & Data Processing: Scikit-learn, XGBoost, Pandas, NumPy
 
@@ -22,6 +22,6 @@ Web Deployment: Streamlit
 
 Version Control & Hosting: GitHub
 
-**Live Demo
+**Live Demo**
 
 Streamlit App: https://weatherforecastml-lrjz3ggiiksiwcjcjaa2kx.streamlit.app/
